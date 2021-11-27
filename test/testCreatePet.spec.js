@@ -16,7 +16,8 @@ describe("Criar um pet com sucesso", () => {
                 .send(requestCreatePet.createPet(1, "Cachorro", "Doguinho",
                     "http://www.teste.com",
                     "animais domésticos",
-                    "available"))
+                    "available"
+                ))
                 .end((err, res) => {
                     expect(res).to.has.status(200)
                     expect(res.body.id).to.equals(1)
